@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon"/>
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="  crossorigin="anonymous"  referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Audiowide">
+    <link rel="stylesheet" href="style.css">
+    <title>MedOrder</title>
+  </head>
+  <body>
+    <div id="cont">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#cont">MedOrder</a>
+        <button class="navbar-toggler"  type="button"  data-toggle="collapse"  data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent"  aria-expanded="false"  aria-label="Toggle navigation">  <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#cont">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#feedback">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#review">Review</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2 class="display-4 fade-in" style="text-shadow: 2px 2px 5px red; font-family: Audiowide, sans-serif;">MedOrder - Your Trusted Online Pharmacy</h2><br>
+            <center><a href="#order" class="btn btn-primary zoom-in">Order Now</a></center><br>
+        </div>
+        <div class="container">
+          <h2 class="text-center rotate" style="color: rgb(0, 183, 255); text-shadow: 2px 2px 5px lightcoral; font-family: monospace;">Features</h2>
+          <div class="row">
+              <div class="col-md-6 slide-in-left">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Fast Delivery</h5>
+                          <p class="card-text">Get your medicines delivered within 24 hours, in a range of 24km</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 slide-in-right">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Authentic Products</h5>
+                          <p class="card-text">We ensure that all products are approved by regulatory authorities.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div id="order"></div>
+    <br>
+      <div class="container">
+        <video autoplay loop muted id="background-video">
+          <source src="mainvideo.mp4" type="video/mp4"/>
+        </video>
+        <h1 class="text-center mt-5" style="color: brown; text-shadow: 2px 2px 5px palegreen; font-family: Audiowide;">
+          <b>Medicine Ordering </b>
+        </h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img1.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Acetaminophen (Tylenol)</h4>
+                <p class="card-text">
+                  A pain reliever and fever reducer for children and adults
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="ace('Acetaminophen')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img2.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Ibuprofen (Motrin)</h4>
+                <p class="card-text">
+                  A (NSAID) drug that reduces pain
+                </p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal" onclick="ibu('Ibuprofen')"> Order Now </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img3.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Antihistamines (Claritin)</h4>
+                <p class="card-text">
+                  Relieves sneezing, itching, and congestion caused by allergies
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="ant('Antihistamines')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img4.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Antacids (Rolaids)</h4>
+                <p class="card-text">
+                  Neutralizes stomach acid, gives quick relief for heartburn
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="rol('Antacids')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img5.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Hydrocortisone cream</h4>
+                <p class="card-text">
+                  Used on the skin to treat swelling, itching and irritation
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="hyd('Hydrocortisone')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img6.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Amlodipine</h4>
+                <p class="card-text">
+                  Used to treat high bp in adults and children above 6 years
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="aml('Amlodipine')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img7.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Amoxicillin</h4>
+                <p class="card-text">
+                  Used to treat bacterial infections, such as chest pain
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="amx('Amoxicillin')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img8.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Metformin</h4>
+                <p class="card-text">
+                  Helps to control the amount of glucose (sugar) in your blood
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="met('Metformin')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img9.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Insulin</h4>
+                <p class="card-text">
+                  Used in the treatment of diabetes mellitus type-1 and 2
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="ins('Insulin')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img10.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Gabapentin</h4>
+                <p class="card-text">
+                  Used to treat epilepsy. It's also taken for nerve pain
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="gab('Gabapentin')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img11.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Paracetamol</h4>
+                <p class="card-text">
+                  Used to treat high fever. It's also used for high fever
+                </p>
+                <button class="btn btn-primary"  data-toggle="modal"  data-target="#orderModal"  onclick="para('Paracetamol')">  Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="img12.jpeg" alt="Medicine" />
+              <div class="card-body">
+                <h4 class="card-title">Levothyroxine</h4>
+                <p class="card-text">
+                  Used to treat an underactive thyroid gland (hypothyroidism)
+                </p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal" onclick="lev('Levothyroxine')">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">          
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number"class="form-control"id="quantity"value="1"min="1"/>
+                  </div>
+                  <button type="submit" class="btn btn-primary" onclick="place()">Place Order</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="about"></div><br><br>
+        <hr>
+        <div class="container">
+            <h1 style="margin-left: 20px; color: black; text-shadow: 2px 2px 5px palegreen; font-family: Sofia;"><b>About Us</b></h1>
+          <div class="row">
+            <div class="col-md-7">
+              <div class="about-section">
+                <p class="about-text">
+                  MedOrder: Delivering quality
+                  medicines at your doorstep. Order prescription
+                  medications and healthcare products securely.
+                  Fast delivery, 24/7 customer service - MedOrder, healthcare made easy!
+                </p>
+                <button class="btn btn1">Learn More</button>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <img src="aboutimg.jpg" alt="" class="abtimg">
+            </div>
+          </div>
+        </div>
+      <div id="contact"></div><br><br>
+      <hr>
+      <div class="container">
+              <h1 style="margin-left: 20px; color: black; text-shadow: 2px 2px 5px palegreen; font-family: Sofia;"><b>Contact Me</b></h1>
+              <div class="row">
+                  <div class="col-md-7">
+                      <div class="card contact-box">
+                          <div class="card-body">
+                              <p>
+                                  <i class="fa-solid fa-user-doctor"></i>
+                                  Prasanna Dev Anand D P
+                              </p>
+                              <p>
+                                  <i class="fa-solid fa-location-crosshairs"></i>
+                                  Address: 32, Indra Nagar, East Chinthamani, Trichy-620 002.
+                              </p>
+                              <p>
+                                  <i class="fa-solid fa-mobile"></i>
+                                  Phone: +91 95979 96530
+                              </p>
+                              <p>
+                                  <i class="fas fa-envelope"></i>
+                                  Email: <a href="https://mail.google.com/mail/">prasanna170204@gmail.com</a>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-5">
+                    <img src="contactimg.jpg" alt="" class="contimg">
+                  </div>
+              </div>
+          </div>        
+          <div id="feedback"></div><br><br>
+          <hr>
+          <div class="container">
+              <h1 style="margin-left: 20px; color: black; text-shadow: 2px 2px 5px palegreen; font-family: Sofia;"><b>Feedback/Enquiry</b></h1>
+              <div class="row">
+                  <div class="col-md-8">
+                      <div class="feedback-container card1">
+                          <div class="card-body">
+                              <form>
+                                  <div class="form-group">
+                                      <label for="name">Name:</label>
+                                      <input type="text" id="name" name="name" class="form-control" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="phone">Phone Number:</label>
+                                      <input type="tel" id="phone" name="phone" class="form-control" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="message">Message:</label>
+                                      <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                                  </div>
+                                  <button type="submit" class="btn1">Submit</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <img src="feedbackimg.webp" alt="" class="feedimg">
+                  </div>
+              </div>
+          </div>             
+      </div>
+      <div id="review"></div><br><br>
+      <hr>
+      <div class="container">
+        <div class="text-center container">
+            <h1 style="color: black; text-shadow: 2px 2px 5px palegreen; font-family: Audiowide;"><b>Millions of people love to order in MedOrder.</b></h1>
+        </div><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="color: orange; font-family: cursive;"><b>2000+</b> people's are booking medicines in our website.</p><hr>
+                    <img src="medicines.jpg" alt="" style="height: 497px; width: fit-content; border-radius: 70px;">
+                </div>
+                <div class="col-md-4">
+                    <p style="color: white; font-family: cursive;"><b>500+</b> employee's working in our online pharmacy.</p><hr>
+                    <img src="employee.jpg" alt="" style="height: 497px; width: fit-content; border-radius: 70px;">
+                </div>
+                <div class="col-md-4">
+                    <p style="color: green; font-family: cursive;"><b>100+</b> delivey agents are doing this service to people's.</p><hr>
+                    <img src="agent.jpg" alt="" style="height: 497px; width: fit-content; border-radius: 70px;">
+                </div>
+            </div>
+        </div>
+    </div><br>
+      <button onclick="topFunction()" id="upBtn" title="Go to top">
+        <center><i class="fas fa-arrow-up"></i></center>
+      </button>
+    </div>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <h5>About MedOrder</h5>
+                  <p>MedOrder is an online pharmacy dedicated to providing quality medications and excellent customer service.</p>
+              </div>
+              <div class="col-md-3">
+                  <h5>Quick Links</h5>
+                  <ul>
+                      <li><a href="#about">About Us</a></li>
+                      <li><a href="#contact">Contact Us</a></li>
+                      <li><a href="#feedback">Feedback</a></li>
+                      <li><a href="#">Terms and Conditions</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-3">
+                  <h5>Social Media</h5>
+                  <ul>
+                      <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook" style="color: white; background-color: blue;"></i> Facebook</a></li>
+                      <li><a href="https://mail.google.com/"><i class="fa-solid fa-square-envelope" style="color: white; background-color: orangered;"></i> Email</a></li>
+                      <li><a href="https://twitter.com/?lang=en"><i class="fa-brands fa-square-x-twitter" style="color: white; background-color: black;"></i> X-twitter</a></li>
+                      <li><a href="https://web.whatsapp.com/"><i class="fa-brands fa-square-whatsapp" style="background-color: rgb(14, 209, 14); color: white;"></i> Whatsapp</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="copyright">
+              <p>&copy; 2024 MedOrder. All rights reserved.</p>
+          </div>
+      </div>
+  </footer> 
+    <script src="/script.js"></script>
+  </body>
+</html>

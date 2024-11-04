@@ -1,0 +1,307 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+.card {
+    margin: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+.card1{
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+}
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-body {
+    padding: 20px;
+}
+.card-title {
+    font-family: "Sofia", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-text {
+    font-family: cursive;
+    font-size: 14px;
+    color: grey;
+}
+.btn-primary {
+    background-color: rgb(0, 225, 41);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-family: cursive;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    animation: rotate 2s;
+}
+.btn1 {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: Audiowide;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn1:hover{
+    animation: rotate 2s;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.contact-box {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0px;
+}
+.contact-box .card-body p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.contact-box .card-body i {
+    font-size: 25px;
+    margin-right: 10px;
+    color: orange;
+}
+.contimg{
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 258px;
+    object-fit: cover;
+}
+.about-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+}
+.about-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.about-text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: blue;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.abtimg{
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.feedback-container {
+    margin: 50px auto;
+    padding: 20px;
+}
+.feedback-container .card-title {
+    margin-bottom: 20px;
+}
+.feedback-container label {
+    margin-bottom: 10px;
+}
+.feedback-container input, .feedback-container textarea {
+    margin-bottom: 20px;
+}
+.feedback-container button{
+    padding: 10px 20px;
+}
+.feedimg{
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 100%;
+    height: 522px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 2rem;
+}
+.card-text {
+    font-size: 1rem;
+    color: blue;
+}
+.jumbotron {
+    background-image: url(main\ img.avif);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.display-4 {
+    font-size: 40px;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+}
+#upBtn {
+    display: none;
+    position: fixed;
+    height: 55px;
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color: silver; 
+    color: black; 
+    cursor: pointer;
+    padding: 10px; 
+    border-radius: 10px; 
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+#upBtn:hover {
+    background-color: gold;
+    color: white;
+}
+.footer {
+    background-color: #03429f;
+    color: white;
+    padding: 50px 0;
+}
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer .col-md-4 {
+    flex-basis: 33.33%;
+}
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer li {
+    margin-bottom: 10px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: white;
+}
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.social-media li {
+    margin-right: 20px;
+}
+.social-media a {
+    font-size: 24px;
+    color: white;
+}
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+}
+
+@media(max-width:768px){
+    .abtimg{
+        height: 100%;
+        object-fit: cover;
+    }
+    .contimg{
+        height: 328px;
+        object-fit: cover;
+    }
+}
+.zoom-in{
+    animation: zoomIn 3s;
+}
+@keyframes zoomIn{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.fade-in{
+    animation: fadeIn 8s;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.rotate{
+    animation: rotate 3s;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.slide-in-left{
+    animation: slideInL 3s;
+}
+@keyframes slideInL{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.slide-in-right{
+    animation: slideInR 3s;
+}
+@keyframes slideInR{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+
